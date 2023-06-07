@@ -1,11 +1,10 @@
-let selected;
+let selected = [];
 let serverURL = "https://acoustic-famous-cardinal.glitch.me/";
+fetch(serverURL).then((d) => d.json()).then((r) => {
+  selected = r[0];
+  if (selected) ghostFill(selected);
+});
 window.addEventListener("load", () => {
-  selected = [];
-  fetch(serverURL).then((d) => d.json()).then((r) => {
-    selected = r[0];
-    if (selected) ghostFill(selected);
-  });
   const sheet = document.getElementById("sheet");
   let width = 20;
   let height = 33;
@@ -22,13 +21,14 @@ window.addEventListener("load", () => {
       sheet.appendChild(input);
     }
   }
-  function ghostFill(items) {
-    items.forEach((e) => {
-      let box = document.getElementById(e);
-      box.checked = true;
-    });
-  }
 });
+
+function ghostFill(items) {
+  items.forEach((e) => {
+    let box = document.getElementById(e);
+    box.checked = true;
+  });
+}
 
 function onSubmit() {
   postData(serverURL, selected).then((data) => { 
