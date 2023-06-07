@@ -1,7 +1,7 @@
 let selected;
 let serverURL = "https://acoustic-famous-cardinal.glitch.me/";
 window.addEventListener("load", () => {
-  fetch(serverURL, { mode: "no-cors" }).then((d) => d.json()).then((r) => console.log(r));
+  fetch(serverURL).then((d) => d).then((r) => console.log(r));
   selected = [];
   const sheet = document.getElementById("sheet");
   let width = 20;
