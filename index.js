@@ -1,8 +1,11 @@
 let selected;
 let serverURL = "https://acoustic-famous-cardinal.glitch.me/";
 window.addEventListener("load", () => {
-  fetch(serverURL).then((d) => d).then((r) => console.log(r));
   selected = [];
+  fetch(serverURL).then((d) => d.json()).then((r) => {
+    selected = r[0];
+    if (selected) ghostFill(selected);
+  });
   const sheet = document.getElementById("sheet");
   let width = 20;
   let height = 33;
@@ -15,8 +18,15 @@ window.addEventListener("load", () => {
         else selected.splice(selected.findIndex((v) => v == `(${i},${j})`)-1, 1);
         return true;
       }
+      input.id = `(${i},${j})`;
       sheet.appendChild(input);
     }
+  }
+  function ghostFill(items) {
+    items.forEach((e) => {
+      let box = document.getElementById(e);
+      box.checked = true;
+    });
   }
 });
 
