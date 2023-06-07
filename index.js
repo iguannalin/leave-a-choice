@@ -7,7 +7,7 @@ fetch(serverURL).then((d) => d.json()).then((r) => {
 window.addEventListener("load", () => {
   const sheet = document.getElementById("sheet");
   let width = 20;
-  let height = 33;
+  let height = 25;
   for (let i = 0; i < width; i++) {
     for (let j = 0; j < height; j++) {
       let input = document.createElement("input");
@@ -31,9 +31,7 @@ function ghostFill(items) {
 }
 
 function onSubmit() {
-  postData(serverURL, selected).then((data) => { 
-    console.log(data);
-  });
+  postData(serverURL, selected);
 }
 
 function onReset() {
