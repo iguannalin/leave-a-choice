@@ -10,11 +10,14 @@ html {
   margin: auto 0;
 }
 
+*:not(button) {
+  cursor: url('pencil.png') 0 16, default;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
   background-color: var(--main-bg-color);
   font-family: minion-pro, serif;
   font-style: normal;
@@ -23,13 +26,14 @@ body {
   font-family: 'Times New Roman', Times, serif;
   font-size: 12px;
   text-align: center;
-  cursor: url('question.png') 0 16, pointer;
+  /* cursor: url('question.png') 0 16, pointer; */
 }
 
 form {
   width: 70%;
   border: 3px solid white;
   border-radius: 5px;
+  margin-top: 5%;
 }
 
 h1 {
@@ -57,7 +61,6 @@ input[type='checkbox'] {
   appearance: none;
   -webkit-appearance: none;
   outline: none;
-  cursor: url('pencil.png') 0 16, default;
 }
 
 input[type='checkbox']:checked {
