@@ -1,4 +1,4 @@
-@import url(small.css) (min-width:400px);
+@import url(small.css) (min-width:0px);
 @import url(large.css) (min-width:900px);
 
 :root {
