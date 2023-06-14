@@ -3,7 +3,7 @@ form {
   border: 3px solid white;
   border-radius: 5px;
   margin-top: 10%;
-  width: 649px; /* tried and true for the amount of checked boxes on screen */
+  width: 600px; /* tried and true for the amount of checked boxes on screen */
 }
 
 h1 {
