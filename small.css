@@ -1,9 +1,13 @@
 
+body {
+  font-size: 10px;
+}
+
 form {
   border: 3px solid white;
   border-radius: 5px;
   margin-top: 10%;
-  width: 600px; /* tried and true for the amount of checked boxes on screen */
+  width: 414px; /* tried and true for the amount of checked boxes on screen */
 }
 
 h1 {
@@ -12,22 +16,18 @@ h1 {
   color: var(--main-bg-color);
 }
 
-#footer button {
-  scale: 1.5;
-}
-
 #footer {
   padding: 5% 0 3%;
 }
 
 #sheet {
   background: linear-gradient( to bottom, var(--main-text-color), var(--main-text-color) 50%, var(--alt-bg-color) 50%, var(--alt-bg-color));
-  background-size: 100% 62px;
+  background-size: 100% 40px;
 }
 
 input[type='checkbox'] {
-  width: 25px;
-  height: 25px;
+  width: 14px;
+  height: 14px;
   background-color: white;
   border-radius: 50%;
   vertical-align: middle;

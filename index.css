@@ -1,5 +1,5 @@
 @import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:900px);
+@import url(large.css) (min-width:700px);
 
 :root {
   --main-bg-color: rgb(35, 35, 35);
